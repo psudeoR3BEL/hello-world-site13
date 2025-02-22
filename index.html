@@ -2,218 +2,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Red Social Media</title>
+    <title>Badass Hottyy Ecommerce</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #ffebee; /* Light red background */
-            color: #333;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            color: #f8f9fa;
         }
-
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
+        .navbar {
+            background-color: #1f1c2c;
         }
-
-        header {
-            background-color: #f44336; /* Medium red header */
+        .navbar-brand, .nav-link {
+            color: #f8f9fa !important;
+        }
+        .hero-section {
+            position: relative;
+            height: 100vh;
             color: white;
-            padding: 20px 0;
             text-align: center;
-            margin-bottom: 20px;
-        }
-
-        nav {
-            background-color: #d32f2f; /* Darker red nav */
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            display: inline-block;
-        }
-
-        nav a:hover {
-            background-color: #b71c1c; /* Even darker red on hover */
-        }
-
-        .post {
-            background-color: white;
-            border: 1px solid #ffcdd2; /* Light red border */
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-        }
-
-        .post-header {
             display: flex;
             align-items: center;
-            margin-bottom: 10px;
+            justify-content: center;
+            overflow: hidden;
         }
-
-        .profile-pic {
-            width: 50px;
-            height: 50px;
-            background-color: #ef9a9a; /* Placeholder profile pic color */
-            border-radius: 50%;
-            margin-right: 10px;
+        .hero-text {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            z-index: 1;
         }
-
-        .username {
-            font-weight: bold;
-            color: #d32f2f; /* Darker red username */
+        .btn-primary {
+            background-color: #dc3545;
+            border-color: #dc3545;
         }
-
-        .post-content {
-            margin-bottom: 10px;
+        .btn-primary:hover {
+            background-color: #c82333;
+            border-color: #c82333;
         }
-
-        .post-actions {
-            display: flex;
-            justify-content: flex-start;
+        .featured-products {
+            padding: 50px 0;
         }
-
-        .post-actions button {
-            background-color: #f44336; /* Medium red button */
-            color: white;
+        .product-card {
             border: none;
-            padding: 8px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-right: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
         }
-
-        .post-actions button:hover {
-            background-color: #d32f2f; /* Darker red button on hover */
+        .product-card:hover {
+            transform: scale(1.05);
         }
-
-        .create-post {
-            background-color: white;
-            border: 1px solid #ffcdd2; /* Light red border */
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 5px;
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
         }
-
-        .create-post textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ffcdd2; /* Light red border */
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-
-        .create-post button {
-            background-color: #f44336; /* Medium red button */
+        .footer {
+            background-color: #1f1c2c;
             color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .create-post button:hover {
-            background-color: #d32f2f; /* Darker red button on hover */
-        }
-
-        footer {
-            text-align: center;
             padding: 20px 0;
-            background-color: #d32f2f; /* Darker red footer */
-            color: white;
-            margin-top: 20px;
+            text-align: center;
+        }
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Red Social</h1>
-    </header>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Profile</a>
-        <a href="#">Friends</a>
-        <a href="#">Messages</a>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Badass Hottyy</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-user"></i> Account</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <div class="container">
-        <div class="create-post">
-            <h3>Create Post</h3>
-            <textarea id="post-text" placeholder="What's on your mind?"></textarea>
-            <button onclick="createPost()">Post</button>
-        </div>
-
-        <div id="posts">
-            <!-- Posts will be added here by JavaScript -->
-            <div class="post">
-                <div class="post-header">
-                    <div class="profile-pic"></div>
-                    <h4 class="username">John Doe</h4>
-                </div>
-                <div class="post-content">
-                    <p>This is a sample post. Welcome to Red Social!</p>
-                </div>
-                <div class="post-actions">
-                    <button>Like</button>
-                    <button>Comment</button>
-                </div>
-            </div>
-
-            <div class="post">
-                <div class="post-header">
-                    <div class="profile-pic"></div>
-                    <h4 class="username">Jane Smith</h4>
-                </div>
-                <div class="post-content">
-                    <p>Another day, another post on Red Social. Having a great time!</p>
-                </div>
-                <div class="post-actions">
-                    <button>Like</button>
-                    <button>Comment</button>
-                </div>
+    <header class="hero-section">
+        <div id="particles-js"></div>
+        <div class="container">
+            <div class="hero-text" data-tilt>
+                <h1>Unleash Your Inner Badass</h1>
+                <p>Discover the hottest styles and trends.</p>
+                <a href="#" class="btn btn-primary btn-lg">Shop Now</a>
             </div>
         </div>
-    </div>
+    </header>
 
-    <footer>
-        &copy; 2023 Red Social
+    <section class="featured-products">
+        <div class="container">
+            <h2>Featured Products</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card product-card" data-tilt>
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b2baf30?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="Product 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Product Title 1</h5>
+                            <p class="card-text">$99.99</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card product-card" data-tilt>
+                        <img src="https://images.unsplash.com/photo-1505740420928-3e0403d9d084?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="Product 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Product Title 2</h5>
+                            <p class="card-text">$79.99</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card product-card" data-tilt>
+                        <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Product Title 3</h5>
+                            <p class="card-text">$129.99</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Badass Hottyy Ecommerce. All rights reserved.</p>
+        </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tilt.js@1.2.1/dest/tilt.jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        function createPost() {
-            const postText = document.getElementById('post-text').value;
-            if (postText.trim() !== "") {
-                const postsContainer = document.getElementById('posts');
-                const newPost = document.createElement('div');
-                newPost.classList.add('post');
-                newPost.innerHTML = `
-                    <div class="post-header">
-                        <div class="profile-pic"></div>
-                        <h4 class="username">You</h4>
-                    </div>
-                    <div class="post-content">
-                        <p>${postText}</p>
-                    </div>
-                    <div class="post-actions">
-                        <button>Like</button>
-                        <button>Comment</button>
-                    </div>
-                `;
-                postsContainer.prepend(newPost); // Add new post at the beginning
-                document.getElementById('post-text').value = ""; // Clear textarea
-            } else {
-                alert("Post cannot be empty!");
-            }
-        }
+        // Initialize Particles.js
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    },
+                    "image": {
+                        "src": "img/github.svg",
+                        "width": 100,
+                        "height": 100
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+
+        // Initialize Tilt.js
+        $('.product-card').tilt({
+            maxTilt: 15,
+            perspective: 1000,
+            scale: 1.1,
+            speed: 300,
+            glare: true,
+            maxGlare: 0.5
+        });
     </script>
 </body>
 </html>
